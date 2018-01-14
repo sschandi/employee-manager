@@ -55,46 +55,43 @@
 </template>
 
 <script>
-    import db from './firebaseInit'
-    export default {
-      name: 'new-employee',
-      data () {
-        return {
-          employee_id: null,
-          name: null,
-          dept: null,
-          position: null,
-          supervisor: null,
-          salary: null,
-          address: null,
-          phone: null,
-          notes: null
-        }
-      },
-      methods: {
-        saveEmployee () {
-          db.collection('employees').add({
-            employee_id: this.employee_id,
-            name: this.name,
-            dept: this.dept,
-            position: this.position,
-            supervisor: this.supervisor,
-            salary: this.salary,
-            address: this.address,
-            phone: this.phone,
-            notes: this.notes
-          })
-          .then(docRef => {
-            console.log('Client added: ', docRef.id)
-            this.$router.push('/')
-          })
-          .catch(error => {
-            console.error('Error adding employee: ', error)
-          })
-        }
+  import db from './firebaseInit'
+  export default {
+    name: 'new-employee',
+    data () {
+      return {
+        employee_id: null,
+        name: null,
+        dept: null,
+        position: null,
+        supervisor: null,
+        salary: null,
+        address: null,
+        phone: null,
+        notes: null
+      }
+    },
+    methods: {
+      saveEmployee () {
+        db.collection('employees').add({
+          employee_id: this.employee_id,
+          name: this.name,
+          dept: this.dept,
+          position: this.position,
+          supervisor: this.supervisor,
+          salary: this.salary,
+          address: this.address,
+          phone: this.phone,
+          notes: this.notes
+        })
+        .then(docRef => {
+          console.log('Client added: ', docRef.id)
+          this.$router.push('/')
+        })
+        .catch(error => {
+          console.error('Error adding employee: ', error)
+        })
       }
     }
+  }
 </script>
-<<style>
-
-</style>

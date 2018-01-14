@@ -70,13 +70,13 @@ export default {
 }
 </script>
 <style>
-[type="checkbox"] + label {
-  margin-right: 35px;
-}
-#checkboxes{
-  margin-bottom: 15px;
-}
-.it {
-  color: red;
-}
+  [type="checkbox"] + label {
+    margin-right: 35px;
+  }
+  #checkboxes{
+    margin-bottom: 15px;
+  }
+  .it {
+    color: red;
+  }
 </style>
