@@ -1,6 +1,9 @@
 # employeemanager
 
-> Small Employee Manager App
+> Small Employee Manager App using Vue and Firebase
+> Allows add, delete, edit, and search of employees
+
+Live version available here: https://employee-manager.netlify.com/ 
 
 ## Build Setup
 
